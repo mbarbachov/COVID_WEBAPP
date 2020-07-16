@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>World Info</title>
+
+        <!--connect scripts to our html file-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJHq7eLwp2xpHngWbalRhOH1RTBeSRkjk&callback=createMap&libraries=&v=weekly"
+                defer
+        ></script>
+        <script src="./app.js"></script>
+
+        <!-- Connect a stylesheet -->
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+    </head>
+    <body>
+        <div id="map"></div>
+        <div id="search-side-bar">
+            <div id="query-bar">
+                <textarea id="search-bar" placeholder="Enter your query"></textarea>
+                <button id="search-button">SEARCH</button>
+            </div>
+            <p id="search-result">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.</p>
+
+        </div>
+        <!--Popup/Modal called when a person clicks on a location (for now with Lorem)-->
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">Modal Title</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!--Content-->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+            </div>
+        </div>
+        <div id="overlay"></div>
+    </body>
+</html>
