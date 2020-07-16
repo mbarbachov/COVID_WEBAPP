@@ -1,7 +1,3 @@
-const myModal = document.getElementById('modal');
-const overlay = document.getElementById('overlay');
-
-
 function createMap() {
     let map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
@@ -49,31 +45,26 @@ function geocodeLatLng(geocoder, map, marker) {
 }
 
 // modal displays and overlays
-// const openModalButtons = document.querySelectorAll('[data-modal-target]');  // no need for a modal button
+let modal = document.getElementById('simpleModal');
+let modalButton = document.getElementById('modalBtn');
+let closeButton = document.getElementById('closeBtn');
 
+// listen for events
+modalButton.addEventListener('click', openModal);
+closeButton.addEventListener('click', closeModal);
+window.addEventListener('click', clickOutside);
 
-overlay.onclick = () => {
-    if (myModal.classList[0] === 'active') {
-        closeModal(myModal);
+// close and open functions
+function openModal() {
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    modal.style.display = 'none'
+}
+
+function clickOutside(e) {
+    if (e.target === modal) {
+        modal.style.display = 'none';
     }
 }
-// overlay.addEventListener('click', () => {
-//     if (myModal.classList[0] === 'active') {
-//         closeModal(myModal);
-//     }
-// });
-
-function openModal(modal) {
-    if (modal === null) return;
-
-    modal.classList.add('active');
-    overlay.classList.add('active');
-}
-
-function closeModal(modal) {
-    if (modal === null) return;
-
-    modal.classList.remove('active');
-    overlay.classList.remove('active');
-}
-
