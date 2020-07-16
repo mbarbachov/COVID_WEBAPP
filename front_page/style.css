@@ -1,9 +1,9 @@
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-#map {
-    height: 100%;
-    width: 80%;
-}
+/*#map {*/
+/*    height: 100%;*/
+/*    width: 80%;*/
+/*}*/
 
 /*#search-bar {*/
 /*    height: 100%;*/
@@ -16,6 +16,7 @@
 /*}*/
 
 body {
+    font-family: Airal, Helvetica, sans-serif;
     font-size: 17px;
     line-height: 1.6;
 }
@@ -93,5 +94,3 @@ body {
     from {opacity: 0}
     to {opacity: 1}
 }
-
-
