@@ -1,35 +1,34 @@
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-/*#map {*/
-/*    height: 100%;*/
-/*    width: 80%;*/
-/*}*/
-
-/*#search-bar {*/
-/*    height: 100%;*/
-/*    width: 20%;*/
-/*    float: right;*/
-/*}*/
-
-/*#search-result {*/
-/*    word-wrap: break-word;*/
-/*}*/
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    outline: none;
+}
 
 body {
     font-family: Airal, Helvetica, sans-serif;
     font-size: 17px;
     line-height: 1.6;
+    height: 100%;
+    width: 100%;
+    background-color: #29313a;
 }
 
-.button {
-    background: coral;
-    padding: 1em 2em;
-    color: #fff;
-    border: 0;
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 100%;
+    width: 100%;
 }
 
-.button:hover {
-    background: #333;
+.search-popout {
+    width: 20%;
+    height: 100%;
+    float: right;
+}
+
+html {
+    height: 100%;
 }
 
 .modal {
